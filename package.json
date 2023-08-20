@@ -2,5 +2,20 @@
   "name": "cli",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "bin": {
+    "practice": "./dist/index.js"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w",
+    "link-cli": "sudo chmod +x /usr/local/bin/practice && yarn --global link",
+    "link-cli-f": "sudo yarn --global unlink cli ;sudo yarn --global link && chmod +x /usr/local/bin/practice"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "commander": "^11.0.0"
+  }
 }
